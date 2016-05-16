@@ -1,17 +1,15 @@
-# encoding: UTF-8
-# This file is auto-generated from the current state of the database. Instead
-# of editing this file, please use the migrations feature of Active Record to
-# incrementally modify your database, and then regenerate this schema definition.
-#
-# Note that this schema.rb definition is the authoritative source for your
-# database schema. If you need to create the application database on another
-# system, you should be using db:schema:load, not running all the migrations
-# from scratch. The latter is a flawed and unsustainable approach (the more migrations
-# you'll amass, the slower it'll run and the greater likelihood for issues).
-#
-# It's strongly recommended that you check this file into your version control system.
+ActiveRecord::Schema.define(version: 20160516232105) do
 
-ActiveRecord::Schema.define(version: 20160516222458) do
+  create_table "cars", force: :cascade do |t|
+    t.integer  "idCar"
+    t.string   "VIN"
+    t.string   "carBrand"
+    t.string   "namberAuto"
+    t.string   "yearRelease"
+    t.string   "scopeEngine"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "clients", force: :cascade do |t|
     t.string   "fullName"
@@ -20,6 +18,65 @@ ActiveRecord::Schema.define(version: 20160516222458) do
     t.string   "license"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "details_categories", force: :cascade do |t|
+    t.string   "nameCategory"
+    t.integer  "idCategory"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "invoices", force: :cascade do |t|
+    t.string   "fullNameDetail"
+    t.string   "priceDetail"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "list_operations", force: :cascade do |t|
+    t.integer  "idOperatin"
+    t.integer  "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "masters", force: :cascade do |t|
+    t.integer  "idMaster"
+    t.string   "fullName"
+    t.string   "telNumber"
+    t.string   "address"
+    t.string   "spetialization"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "operations", force: :cascade do |t|
+    t.string   "nameOperation"
+    t.string   "specialization"
+    t.string   "details"
+    t.date     "dateStart"
+    t.date     "dateEnd"
+    t.integer  "box"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer  "idOrder"
+    t.date     "dateOrder"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "providers_lists", force: :cascade do |t|
+    t.string   "nameOrganization"
+    t.integer  "telNum"
+    t.string   "address"
+    t.string   "city"
+    t.integer  "idOrganization"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
 end

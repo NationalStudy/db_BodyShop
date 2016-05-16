@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idMaster: 1
+  fullName: MyString
+  telNumber: MyString
+  address: MyString
+  spetialization: MyString
+
+two:
+  idMaster: 1
+  fullName: MyString
+  telNumber: MyString
+  address: MyString
+  spetialization: MyString

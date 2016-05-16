@@ -1,11 +1,20 @@
 Rails.application.routes.draw do
-  root 'clients#index'
+  get 'masters/index'
 
-  get 'clients/index'
+  get 'masters/show'
 
-  get 'clients/create'
+  get 'masters/create'
 
-  get 'clients/update'
+  get 'masters/update'
 
-  get 'clients/destroy'
+  get 'masters/destroy'
+
+  resources :list_operations
+  resources :providers_lists
+  resources :details_categorys
+  resources :invoices
+  resources :operations
+  resources :orders
+  resources :cars
+  resources :clients
 end

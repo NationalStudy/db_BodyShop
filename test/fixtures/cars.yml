@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idCar: 1
+  VIN: MyString
+  carBrand: MyString
+  namberAuto: MyString
+  yearRelease: MyString
+  scopeEngine: MyString
+
+two:
+  idCar: 1
+  VIN: MyString
+  carBrand: MyString
+  namberAuto: MyString
+  yearRelease: MyString
+  scopeEngine: MyString
