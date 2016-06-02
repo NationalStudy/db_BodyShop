@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>New client</h1>
+  <%= simple_form_for(@client) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :fullName %>
+    <%= f.input :telNumber %>
+    <%= f.input :address %>
+    <%= f.input :license %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

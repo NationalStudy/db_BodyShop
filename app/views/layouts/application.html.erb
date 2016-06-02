@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>BodyShop</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -32,8 +32,8 @@
           <li><%= link_to 'DetailCategory', details_categorys_path %></li>
           <li><%= link_to 'ProviderList', providers_lists_path %></li>
           <li><%= link_to 'ListOperations', list_operations_path %></li>
-          <li><%= link_to 'Masters', masters_index_path %></li>
-        </ul
+          
+        </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
